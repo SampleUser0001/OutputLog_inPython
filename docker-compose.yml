@@ -4,5 +4,4 @@ services:
     build: .
     container_name: outputlog
     volumes:
-      - ./start.sh:/start.sh
-      - ./app:/app
+      - ./app:/opt/app

@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
-from logging import getLogger, StreamHandler, DEBUG
+from logging import getLogger, config, StreamHandler, DEBUG
+from util.LogUtil import LogUtil
+
 logger = getLogger(__name__)
+config.dictConfig(LogUtil.get_log_conf('/opt/app/env/log_config.json'))
 handler = StreamHandler()
 handler.setLevel(DEBUG)
 logger.setLevel(DEBUG)
