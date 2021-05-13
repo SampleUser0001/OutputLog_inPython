@@ -3,13 +3,11 @@ import json
 
 class LogUtil:
   
-  def __init__(self):
-    pass
-
   @classmethod
   def get_log_conf(cls, log_conf_path):
     """ ログ設定ファイルを読み込む
     """
-    log_conf = json.load(log_conf_path)
+    with open(log_conf_path, mode='r') as f:
+      log_conf = json.loads(f.read())
     return log_conf
 
