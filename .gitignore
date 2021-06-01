@@ -105,6 +105,7 @@ celerybeat.pid
 .env
 .venv
 env/
+!/app/env/log_config.json
 venv/
 ENV/
 env.bak/
